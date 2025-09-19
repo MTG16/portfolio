@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- !icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader-container">
+            <div class="loader"></div>
+            <div class="loading-text">
+                <span class="loading-letter">L</span>
+                <span class="loading-letter">o</span>
+                <span class="loading-letter">a</span>
+                <span class="loading-letter">d</span>
+                <span class="loading-letter">i</span>
+                <span class="loading-letter">n</span>
+                <span class="loading-letter">g</span>
+                <span class="loading-dots">
+                    <span>.</span>
+                    <span>.</span>
+                    <span>.</span>
+                </span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <!-- <i class="fas fa-code"></i> -->
+                <img src="./T-Mughil.jpg" alt="Mughil T">
+                <span class="logo-text">Mughil T</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home">
+                    <i class="fas fa-home"></i>Home
+                </a>
+                <a href="#about">
+                    <i class="fas fa-user"></i>About
+                </a>
+                <a href="#skills">
+                    <i class="fas fa-cogs"></i>Skills
+                </a>
+                <a href="#projects">
+                    <i class="fas fa-project-diagram"></i>Projects
+                </a>
+                <a href="#contact">
+                    <i class="fas fa-envelope"></i>Contact
+                </a>
+            </div>
+            <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- Particles Background -->
+    <div class="particles-container" id="particlesContainer"></div>
+    
+    <!-- Header -->
+    <header class="header" id="home">
+        <div class="header-content">
+            <div class="header-text">
+                <h1>
+                    <span class="typing-text"></span>
+                    <span class="cursor">|</span>
+                </h1>
+                <p class="description-text" style="opacity: 0;">
+                    <span class="typing-description"></span>
+                </p>
+                <div class="header-buttons">
+                    <a href="#contact" class="cta-btn">Get In Touch</a>
+                    <a href="#" class="resume-btn" id="resumeDownload" onclick="downloadResume()">
+                        <i class="fas fa-download"></i>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Section -->
+    <Section id="about" class="about">
+        <div class="about-content">
+            <div class="profile-img slide-left">
+                <img src="T-Mughil.jpg" alt="">
+            </div>
+            <div class="about-text slide-right">
+                <h2 class="section-title">About me</h2>
+                <p>
+                    I'm a web developer with a passion for creating beautiful and functional websites. I have experience
+                    in HTML, CSS, JavaScript, and various frameworks. I love learning new technologies and improving my
+                    skills.
+                </p>
+                <p>
+                    In my free time, I enjoy exploring new places, reading books, and contributing to open-source
+                    projects. I'm always looking for opportunities to collaborate and grow as a developer.
+                </p>
+                <p>
+                    Feel free to reach out if you want to discuss a project, share ideas, or just say hello!
+                </p>
+                <div class="about-buttons">
+                    <a href="#" class="resume-btn" onclick="downloadResume()">
+                        <i class="fas fa-download"></i>
+                        Download Resume
+                    </a>
+                    <a href="#contact" class="contact-btn">
+                        <i class="fas fa-envelope"></i>
+                        Contact Me
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </Section>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="skills-content">
+            <h2 class="section-title fade-in">Skills</h2>
+            <div class="skills-grid">
+                <div class="skills-card">
+                    <i class="fa-brands fa-square-js"></i>
+                    <h3>JavaScript</h3>
+                    <p>Proficient in JavaScript, including ES6+ features, asynchronous programming, and DOM
+                        manipulation.</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-skill="85"></div>
+                    </div>
+                    <span class="skill-level">85%</span>
+                </div>
+                <div class="skills-card">
+                    <i class="fa-brands fa-html5"></i>
+                    <h3>HTML5</h3>
+                    <p>Experienced in crafting semantic and accessible HTML5 structures for web applications.</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-skill="90"></div>
+                    </div>
+                    <span class="skill-level">90%</span>
+                </div>
+                <div class="skills-card">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                    <p>Skilled in CSS3, including Flexbox, Grid, and responsive design techniques.</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-skill="88"></div>
+                    </div>
+                    <span class="skill-level">88%</span>
+                </div>
+                <div class="skills-card">
+                    <i class="fa-brands fa-react"></i>
+                    <h3>React</h3>
+                    <p>Experienced in building dynamic user interfaces using React, including state management with
+                        hooks.</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-skill="80"></div>
+                    </div>
+                    <span class="skill-level">80%</span>
+                </div>
+                <div class="skills-card">
+                    <i class="fa-brands fa-node-js"></i>
+                    <h3>Node.js</h3>
+                    <p>Proficient in building server-side applications using Node.js and Express.js.</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-skill="75"></div>
+                    </div>
+                    <span class="skill-level">75%</span>
+                </div>
+                <div class="skills-card">
+                    <i class="fa-brands fa-java"></i>
+                    <h3>Java</h3>
+                    <p>Experienced in Java programming, including object-oriented design and development.</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-skill="82"></div>
+                    </div>
+                    <span class="skill-level">82%</span>
+                </div>
+                <div class="skills-card">
+                    <i class="fa-sharp fa-solid fa-database"></i>
+                    <h3>MySQL</h3>
+                    <p>Skilled in database management and querying using MySQL.</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-skill="70"></div>
+                    </div>
+                    <span class="skill-level">70%</span>
+                </div>
+                <div class="skills-card">
+                    <i class="fa-sharp fa-solid fa-leaf"></i>
+                    <h3>Spring Boot</h3>
+                    <p>Experienced in building RESTful APIs and microservices using Spring Boot.</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-skill="78"></div>
+                    </div>
+                    <span class="skill-level">78%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="project-section">
+            <h2 class="section-title fade-in">Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://cdn.pixabay.com/photo/2021/10/08/11/11/shopping-6691014_1280.png" alt="E-Commerce Platform">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <h4>Quick Actions</h4>
+                                <a href="#" class="btn">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="#" class="btn">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div>
+                            <h3>E-Commerce Platform</h3>
+                            <p>A full-stack e-commerce application built with React and Node.js, featuring user
+                                authentication, product management, and a shopping cart.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://cdn.pixabay.com/photo/2024/11/20/08/53/checklist-9210780_1280.png" alt="Task Manager">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <h4>Quick Actions</h4>
+                                <a href="#" class="btn">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="#" class="btn">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div>
+                            <h3>Task Manager</h3>
+                            <p>A task management application built with React and Node.js, allowing users to create,
+                                update, and delete tasks.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://cdn.pixabay.com/photo/2025/05/21/07/59/saving-money-9613047_1280.png" alt="Savings Calculator">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <h4>Quick Actions</h4>
+                                <a href="#" class="btn">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="#" class="btn">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div>
+                            <h3>Savings Calculator</h3>
+                            <p>A simple savings calculator application built with HTML, CSS, and JavaScript, allowing
+                                users to calculate their savings over time.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-content">
+            <h3 class="section-title fade-in">Contact Me</h3>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="from_name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="from_email" required placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea rows="5" id="message" name="message" required placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span class="btn-text">Send Message</span>
+                    <span class="btn-loading" style="display: none;">
+                        <i class="fas fa-spinner fa-spin"></i> Sending...
+                    </span>
+                </button>
+            </form>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="./T-Mughil.jpg" alt="Mughil T">
+                    <h3>Mughil T</h3>
+                    <p>Full Stack Web Developer</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">Frontend Design</a></li>
+                            <li><a href="#">Backend Development</a></li>
+                            <li><a href="#">Full Stack Solutions</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <div class="social-links">
+                            <a href="" target="_blank" rel="noopener noreferrer" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="" target="_blank" rel="noopener noreferrer" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="mailto:mughil.t@email.com" title="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                        <p class="footer-email">mughil.t@email.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-divider"></div>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Mughil T. All rights reserved.</p>
+                    <p>Made with <i class="fas fa-heart"></i> and lots of <i class="fas fa-coffee"></i></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
